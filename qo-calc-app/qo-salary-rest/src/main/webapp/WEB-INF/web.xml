@@ -1,0 +1,33 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<display-name>Qualifying Offer REST</display-name>
+	<description>
+        REST Application to bring back information relevant to Qualifying Offers
+    </description>
+
+	<servlet>
+		<servlet-name>QOServlet</servlet-name>
+		<servlet-class>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-class>
+		<!-- Name of the resource -->
+		<init-param>
+			<param-name>jaxrs.serviceClasses</param-name>
+			<param-value>
+  	  			com.datadidit.mlb.rest.QualifyingOfferResource    			        
+  			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jaxrs.providers</param-name>
+			<param-value>
+				com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>QOServlet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+</web-app>
