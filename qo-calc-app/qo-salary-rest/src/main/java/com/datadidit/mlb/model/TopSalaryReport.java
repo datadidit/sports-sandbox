@@ -10,7 +10,7 @@ public class TopSalaryReport {
 	
 	private StatRep maximum;
 	
-	private Double standardDeviation;
+	private StatRep standardDeviation;
 	
 	private Integer salaryCount;
 	
@@ -34,12 +34,12 @@ public class TopSalaryReport {
 		this.maximum = new StatRep(maximum);
 	}
 
-	public Double getStandardDeviation() {
+	public StatRep getStandardDeviation() {
 		return standardDeviation;
 	}
 
 	public void setStandardDeviation(Double standardDeviation) {
-		this.standardDeviation = standardDeviation;
+		this.standardDeviation = new StatRep(standardDeviation);
 	}
 
 	public StatRep getMean() {
@@ -67,7 +67,7 @@ public class TopSalaryReport {
 	}
 	
 	class StatRep {
-		private String formatedValue;
+		private String formattedValue;
 		
 		private Double value;
 		
@@ -76,15 +76,15 @@ public class TopSalaryReport {
 		public StatRep(Double value){
 			this.value = value;
 			NumberFormat formatter = NumberFormat.getCurrencyInstance();
-			this.setFormatedValue(formatter.format(this.value));
+			this.setFormattedValue(formatter.format(this.value));
 		}
 
-		public String getFormatedValue() {
-			return formatedValue;
+		public String getFormattedValue() {
+			return formattedValue;
 		}
 
-		public void setFormatedValue(String formatedValue) {
-			this.formatedValue = formatedValue;
+		public void setFormattedValue(String formatedValue) {
+			this.formattedValue = formatedValue;
 		}
 
 		public Double getValue() {
