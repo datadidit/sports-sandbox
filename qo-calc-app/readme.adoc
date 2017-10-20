@@ -1,0 +1,17 @@
+= Qualifying Offer Calculation App
+
+== REST
+
+== Web
+
+== Instructions
+
+In order to deploy run this command from the root:
+
+. 
+https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin[Heroku Maven Deploy] 
++
+----
+mvn clean heroku:deploy-war
+----
++
