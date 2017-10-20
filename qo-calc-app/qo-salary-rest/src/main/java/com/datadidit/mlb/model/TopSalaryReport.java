@@ -1,30 +1,37 @@
 package com.datadidit.mlb.model;
 
+import java.text.NumberFormat;
 import java.util.List;
 
 public class TopSalaryReport {
-	private Double mean;
+	private StatRep mean;
 	
-	private Double min;
+	private StatRep min;
 	
-	private Double maximum;
+	private StatRep maximum;
 	
 	private Double standardDeviation;
 	
-	public Double getMin() {
+	private Integer salaryCount;
+	
+	List<PlayerSalary> salaries;
+	
+	NumberFormat formatter = NumberFormat.getCurrencyInstance();
+	
+	public StatRep getMin() {
 		return min;
 	}
 
 	public void setMin(Double min) {
-		this.min = min;
+		this.min = new StatRep(min);
 	}
 
-	public Double getMaximum() {
+	public StatRep getMaximum() {
 		return maximum;
 	}
 
 	public void setMaximum(Double maximum) {
-		this.maximum = maximum;
+		this.maximum = new StatRep(maximum);
 	}
 
 	public Double getStandardDeviation() {
@@ -35,16 +42,12 @@ public class TopSalaryReport {
 		this.standardDeviation = standardDeviation;
 	}
 
-	private Integer salaryCount;
-	
-	List<PlayerSalary> salaries;
-
-	public Double getMean() {
+	public StatRep getMean() {
 		return mean;
 	}
 
 	public void setMean(Double mean) {
-		this.mean = mean;
+		this.mean = new StatRep(mean);
 	}
 	
 	public Integer getSalaryCount() {
@@ -61,5 +64,35 @@ public class TopSalaryReport {
 
 	public void setSalaries(List<PlayerSalary> salaries) {
 		this.salaries = salaries;
+	}
+	
+	class StatRep {
+		private String formatedValue;
+		
+		private Double value;
+		
+		public StatRep(){}
+		
+		public StatRep(Double value){
+			this.value = value;
+			NumberFormat formatter = NumberFormat.getCurrencyInstance();
+			this.setFormatedValue(formatter.format(this.value));
+		}
+
+		public String getFormatedValue() {
+			return formatedValue;
+		}
+
+		public void setFormatedValue(String formatedValue) {
+			this.formatedValue = formatedValue;
+		}
+
+		public Double getValue() {
+			return value;
+		}
+
+		public void setValue(Double value) {
+			this.value = value;
+		}
 	}
 }

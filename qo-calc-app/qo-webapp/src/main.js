@@ -8,6 +8,7 @@ import store from './store'
 
 //Styling from Vuetify
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+require('./stylus/main.styl')
 //import 'vuetify/src/stylus/main.styl'
 
 Vue.config.productionTip = false

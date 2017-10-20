@@ -155,4 +155,9 @@ public class SalaryPuller {
 		//to just replace all 
 		return Long.valueOf(salary.replaceAll(",", "").replaceAll("\\$", ""));
 	}
+
+	@Override
+	public String toString() {
+		return "SalaryPuller [uri=" + uri + ", REGEX=" + REGEX + ", p=" + p + ", fileBased=" + fileBased + "]";
+	}
 }
