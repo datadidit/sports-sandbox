@@ -28,7 +28,8 @@ const state = {
   reportconfiguration: {
     topNSalaries: 125,
     knownPayroll: 100
-  }
+  },
+  loading: false
 }
 
 const store = new Vuex.Store({

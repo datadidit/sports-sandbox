@@ -3,13 +3,16 @@ import axios from 'axios'
 export const calculateQOReport = ({commit, getters}, n) => {
 	var url = getters.baseURL+'/topsalaries?n='+n;
 
+	commit('loading', true)
 	axios.get(url)
 	.then(function(response){
 		commit('updateQOReport', response.data)
+		commit('loading', false)
 	})
 	.catch(function(error){
 		console.log('ERROR!!!!!!')
 		console.log(error)
+		commit('loading', false)
 	})
 }
 

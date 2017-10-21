@@ -9,3 +9,7 @@ export const setBaseURL = (state, value) => {
 export const setTopNSalaries = (state, value) => {
 	state.reportconfiguration.topNSalaries = value
 }
+
+export const loading = (state, value) => {
+	state.loading = value
+}
