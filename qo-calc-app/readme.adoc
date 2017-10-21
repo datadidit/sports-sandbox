@@ -1,6 +1,6 @@
 = Qualifying Offer Calculation App
 
-Application for generating Report for what a Qualifying Offer will be based on the top 125 salaries(configurable).
+Application for generating a MLB Qualifying Offer Report based on the top 125 salaries(configurable).
 
 image::screenshot.png[]
 
