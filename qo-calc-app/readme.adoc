@@ -8,7 +8,14 @@ image::screenshot.png[]
 
 https://qo-app.herokuapp.com/[Live Demo]
 
-. Click `Generate Report` button to get the Qualifying Offer based on the the Top 125 salaries
+. Application opens up at Report page. Users can input the following information:
+* Top N Salaries: Represents number of salaries to factor in for offer(default: 125)
+* Known Payroll: Payroll for team calculated in millions(default: 100)
+* Offers: Number of offers team is sending out to it's free agents(default: 1) 
+. Click `Generate Report` button to get the Qualifying Offer Report. Once the report loads you can scroll down and see the following information:
+image::qualifyingOffer.PNG[]
+image::teamimpact.PNG[]
+image::salaries.PNG[]
 . If you'd like to get data from a different REST endpoint click on Settings dashboard  
 
 == REST

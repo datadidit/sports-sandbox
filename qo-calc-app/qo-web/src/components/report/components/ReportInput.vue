@@ -13,7 +13,7 @@
 				></v-text-field>
 				<v-text-field
 				name="input-3"
-				label="Known Payroll"
+				label="Known Payroll(Millions)"
 				v-model="payroll"
 				></v-text-field>
 				<v-text-field
