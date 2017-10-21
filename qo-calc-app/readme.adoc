@@ -1,17 +1,44 @@
 = Qualifying Offer Calculation App
 
+== Instruction
+
 == REST
+
+REST Resource that scrapes given URL in web.xml file and returns a report of with the Qualifying Offer plus meta data. 
 
 == Web
 
-== Instructions
+GUI for querying the REST Endpoint above
+
+== Build 
+
+To build this project from scratch you'll need to have the following:
+
+* maven
+* Ability to hit maven central and default npm repository
+
+=== Developer Instructions
+
+. Run `mvn clean install` from the root directory
+. Once the build is done you'll have a working application that runs in Jetty application container
+. `cd` into qo-app-dist/target/jetty-distribution-${jetty.version} 
+. Run java -jar start.jar or ./bin/jetty.sh start
+. You should now be able to view the application at http://localhost:8080/qo-app
+. Follow instruction above to generate a report
+
+=== Debug
+
+. You can run the npm application locally using `npm run dev` once you've installed all the dependencies
+. You can run the REST application locally using `mvn jetty:run`
+. See the web.xml to change where the REST endpoint scrapes it's data from 
+
+*Note: Be sure to run npm and jetty on different ports. `mvn jetty:run -Djetty.http.port=<port number>` will allow you to change ports. 
+
+== Heroku Instructions
 
 In order to deploy run this command from the root:
 
-. 
 https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin[Heroku Maven Deploy] 
-+
 ----
-mvn clean heroku:deploy-war
+mvn clean install heroku:deploy-war
 ----
-+

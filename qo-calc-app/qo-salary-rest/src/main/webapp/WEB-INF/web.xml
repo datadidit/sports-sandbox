@@ -29,14 +29,14 @@
 	<context-param>
 		<description>URL to scrape salaries information from</description>
 		<param-name>salaryURL</param-name>
-		<!--<param-value>https://questionnaire-148920.appspot.com/swe/</param-value>-->
-		<param-value>src/test/resources/qo-salaries.html</param-value>
+		<param-value>https://questionnaire-148920.appspot.com/swe/</param-value>
+		<!--param-value>src/test/resources/qo-salaries.html</param-value>-->
 	</context-param>
 	
 	<context-param>
 		<description>Whether scraper is file or url based</description>
 		<param-name>fileBased</param-name>
-		<param-value>true</param-value>
+		<param-value>false</param-value>
 	</context-param>
 	
 	<servlet-mapping>
