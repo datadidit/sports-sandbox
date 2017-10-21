@@ -56,5 +56,10 @@
     <filter-mapping>
         <filter-name>cross-origin</filter-name>
         <url-pattern>/rest/*</url-pattern>
-    </filter-mapping>	
+    </filter-mapping>
+    
+  	<!-- Add in welcome file -->
+  	<welcome-file-list>
+  		<welcome-file>index.html</welcome-file>
+  	</welcome-file-list>
 </web-app>
