@@ -23,7 +23,11 @@ Above you can see measurements of team impact based on report input.
 image::salaries.png[]
 Above you can search the salaries that were factored into the report.
 
-Note: If you'd like to get data from a different REST endpoint click on Settings dashboard  
+Note: If you'd like to get data from a different REST endpoint click on Settings dashboard 
+
+== Technology Used
+
+Main technology used is Java for the backend(REST), Javascript for the Frontend with https://vuejs.org/[Vue.js] and https://vuetifyjs.com/[Vuetify] as my Javascript and CSS Framworks, https://jsoup.org/[Jsoup] for scraping, Maven for build and an assortment of other FOSS products for doing utility functions.  
 
 == REST
 
