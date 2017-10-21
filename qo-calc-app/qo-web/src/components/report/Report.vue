@@ -2,8 +2,9 @@
 	<v-container grid-list-md text-xs-center>
 		<v-layout row wrap>
 			<reportinput />
-			<offer :report="report"/>
-			<salaries :salaries="report.salaries" />
+			<offer v-if="report.salaries.length!=0" :report="report"/>
+			<teamimpact v-if="report.salaries.length!=0" />
+			<salaries v-if="report.salaries.length!=0" :salaries="report.salaries" />
 			<div v-if="loading" class="modal-mask">
 				<div class="modal-wrapper">
 					<div class="spinner-container">
@@ -19,18 +20,17 @@
 	import ReportInput from './components/ReportInput'
 	import OfferInfo from './components/OfferInfo'
 	import Salaries from './components/Salaries'
+	import TeamImpact from './components/TeamImpact'
 
 	export default {
 		name: 'report',
 		components: {
 			'reportinput' : ReportInput,
 			'offer' : OfferInfo,
-			'salaries' : Salaries
+			'salaries' : Salaries,
+			'teamimpact' : TeamImpact
 		},
 		computed: {
-			settings(){
-				return this.$store.getters.settings
-			},
 			report(){
 				return this.$store.getters.report
 			},

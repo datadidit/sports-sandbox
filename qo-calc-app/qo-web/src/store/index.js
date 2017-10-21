@@ -22,6 +22,23 @@ const state = {
       formattedValue: ''
     }
   },
+  team: {
+    payroll : 100,
+    offers : 1,
+    percentage: 0.0,
+    chartdata: {
+      labels: ['Offers', 'Known Payroll'],
+      datasets: [
+        {
+          backgroundColor: [
+            '#41B883',
+            '#E46651',
+          ],
+          data: [100, 20]
+        }
+      ]
+    }
+  },
   appsettings: {
     baseURL: 'https://qo-app.herokuapp.com/rest/qualifyingoffer'
   },

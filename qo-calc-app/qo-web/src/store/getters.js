@@ -3,3 +3,8 @@ export const topNSalaries = state => state.reportconfiguration.topNSalaries
 export const report = state => state.report
 export const salaries = state => state.report.salaries
 export const loading = state => state.loading
+export const payroll = state => state.team.payroll
+export const offers = state => state.team.offers
+export const offerValue = state => state.report.mean.value
+export const chartdata = state => state.team.chartdata
+export const percentage = state => state.team.percentage
