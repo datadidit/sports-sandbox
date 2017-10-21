@@ -9,13 +9,26 @@ Vue.use(Vuex)
 const state = {
   report: {
     salaries: [],
-    minimum: {},
-    maximum: {}, 
-    n: 125,
-    mean: {},
-    standardDeviation: null
+    minimum: {
+      formattedValue: ''
+    },
+    maximum: {
+      formattedValue: ''
+    }, 
+    mean: {
+      formattedValue: ''
+    },
+    standardDeviation: {
+      formattedValue: ''
+    }
   },
-	baseURL: 'https://qo-app.herokuapp.com/rest/qualifyingoffer'
+  appsettings: {
+    baseURL: 'https://qo-app.herokuapp.com/rest/qualifyingoffer'
+  },
+  reportconfiguration: {
+    topNSalaries: 125,
+    knownPayroll: 100
+  }
 }
 
 const store = new Vuex.Store({

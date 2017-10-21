@@ -1,27 +1,30 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import App from '@/App'
-import QOReport from '@/components/QOReport'
+import Dashboard from '@/components/Dashboard'
+import Settings from '@/components/settings/Settings'
+import Report from '@/components/report/Report'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/hellovue',
-      name: 'Hello',
-      component: Hello
-    },
-    {
-   	  path: '/hellovuetify',
-   	  name: 'Vuetify',
-   	  component: App
-    },
-    {
       path: '/',
-      name: 'QOReport',
-      component: QOReport
+      name: 'Dashboard',
+      component: Dashboard,
+      redirect: 'report',
+      children: [
+        {
+          path: 'settings',
+          name: 'Settings',
+          component: Settings
+        },
+        {
+          path: 'report',
+          name: 'Report',
+          component: Report
+        }
+      ]
     }
   ]
 })

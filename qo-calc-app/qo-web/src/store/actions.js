@@ -12,3 +12,6 @@ export const calculateQOReport = ({commit, getters}, n) => {
 		console.log(error)
 	})
 }
+
+export const setBaseURL = ({commit}, value) => commit('setBaseURL', value)
+export const setTopNSalaries = ({commit}, value) => commit('setTopNSalaries', value)

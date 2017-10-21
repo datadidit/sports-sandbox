@@ -34,7 +34,7 @@ public class SalaryPullerTest {
 		TopSalaryReport tSalary = puller.getTopNSalaryReport(125);
 		
 		assertNotNull(tSalary.getMaximum());
-		assertNotNull(tSalary.getMin());
+		assertNotNull(tSalary.getMinimum());
 		assertNotNull(tSalary.getStandardDeviation());
 		assertNotNull(tSalary.getMean());
 		assertNotNull(tSalary.getSalaries());

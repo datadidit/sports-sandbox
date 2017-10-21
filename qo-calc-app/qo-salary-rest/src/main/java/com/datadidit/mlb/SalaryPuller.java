@@ -71,7 +71,7 @@ public class SalaryPuller {
 		TopSalaryReport report = new TopSalaryReport();
 		report.setMean(stats.getMean());
 		report.setMaximum(stats.getMax());
-		report.setMin(stats.getMin());
+		report.setMinimum(stats.getMin());
 		report.setStandardDeviation(stats.getStandardDeviation());
 		report.setSalaryCount(n);
 		report.setSalaries(topSalaries);

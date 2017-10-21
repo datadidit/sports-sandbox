@@ -6,7 +6,7 @@ import java.util.List;
 public class TopSalaryReport {
 	private StatRep mean;
 	
-	private StatRep min;
+	private StatRep minimum;
 	
 	private StatRep maximum;
 	
@@ -18,12 +18,12 @@ public class TopSalaryReport {
 	
 	NumberFormat formatter = NumberFormat.getCurrencyInstance();
 	
-	public StatRep getMin() {
-		return min;
+	public StatRep getMinimum() {
+		return minimum;
 	}
 
-	public void setMin(Double min) {
-		this.min = new StatRep(min);
+	public void setMinimum(Double min) {
+		this.minimum = new StatRep(min);
 	}
 
 	public StatRep getMaximum() {
