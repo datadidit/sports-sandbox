@@ -1,6 +1,15 @@
 = Qualifying Offer Calculation App
 
-== Instruction
+Application for generating Report for what a Qualifying Offer will be based on the top 125 salaries(configurable).
+
+image::screenshot.png[]
+
+== Instructions
+
+https://qo-app.herokuapp.com/[Live Demo]
+
+. Click `Generate Report` button to get the Qualifying Offer based on the the Top 125 salaries
+. If you'd like to get data from a different REST endpoint click on Settings dashboard  
 
 == REST
 
